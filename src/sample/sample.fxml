@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <Pane fx:id="wiserPane" prefHeight="471.0" prefWidth="60.0" styleClass="linear-grad" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="wiserPaneSites" prefHeight="471.0" prefWidth="61.0" visible="false">
+               <children>
+                  <Label fx:id="lbl_G" layoutY="14.0" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+                  <ImageView fx:id="google" fitHeight="42.0" fitWidth="51.0" layoutX="10.0" layoutY="18.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_google_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_B" layoutX="-4.0" layoutY="78.0" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+                  <ImageView fx:id="bing" fitHeight="42.0" fitWidth="51.0" layoutX="9.0" layoutY="82.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_bing_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_W" layoutX="-1.0" layoutY="142.0" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+                  <ImageView fx:id="wikipedia" fitHeight="42.0" fitWidth="51.0" layoutX="8.0" layoutY="146.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_wikipedia_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_Y" layoutX="-1.0" layoutY="204.0" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+                  <ImageView fx:id="youtube" fitHeight="44.0" fitWidth="43.0" layoutX="10.0" layoutY="206.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_play_button_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_D" layoutX="-1.0" layoutY="269.0" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+                  <ImageView fx:id="duckduckgo" fitHeight="44.0" fitWidth="43.0" layoutX="10.0" layoutY="271.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_duckduckgo_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_T" layoutX="-1.0" layoutY="334.0" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+                  <ImageView fx:id="twitter" fitHeight="40.0" fitWidth="38.0" layoutX="13.0" layoutY="340.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_twitter_100px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children></Pane>
+   </left>
+   <top>
+      <Pane prefHeight="49.0" prefWidth="1300.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #212121;">
+               <children>
+                  <ImageView fx:id="menuBar" fitHeight="35.0" fitWidth="32.0" layoutX="14.0" layoutY="9.0" onMousePressed="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_menu_100px_2.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="30.333343505859375" layoutX="22.0" layoutY="50.0" opacity="0.5" startX="-14.166656494140625" stroke="WHITE" />
+               </children>
+            </Pane>
+            <TextField fx:id="searchBox" alignment="TOP_LEFT" layoutX="162.0" layoutY="7.0" onAction="#goTo" prefHeight="39.0" prefWidth="1113.0" promptText="enter search term" styleClass="button" stylesheets="@../css/style.css">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font></TextField>
+            <Button fx:id="goBack" layoutX="66.0" layoutY="7.0" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="40.0" styleClass="button1" stylesheets="@../css/style.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_back_to_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reload" layoutX="114.0" layoutY="7.0" mnemonicParsing="false" onAction="#reload" prefHeight="39.0" prefWidth="40.0" styleClass="button1" stylesheets="@../css/style.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_reset_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="wyser" layoutX="1227.0" layoutY="7.0" mnemonicParsing="false" onAction="#wiserSearch" prefHeight="39.0" prefWidth="40.0" styleClass="button1" stylesheets="@../css/style.css">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/wyser.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Unleash Wyser Search" />
+               </tooltip>
+            </Button>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <StackPane prefHeight="610.0" prefWidth="795.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="webPane" prefHeight="583.0" prefWidth="741.0">
+               <children>
+                  <WebView fx:id="webView" prefHeight="670.0" prefWidth="1220.0" />
+                  <Pane fx:id="founderPane" layoutX="-1.0" prefHeight="333.0" prefWidth="319.0" styleClass="linear-grad" stylesheets="@../css/style.css" visible="false">
+                     <children>
+                        <ImageView fitHeight="228.0" fitWidth="151.0" layoutX="83.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/createdBy.gif" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="100.0" layoutY="253.0" prefHeight="38.0" prefWidth="131.0" text="Created By Ashutosh" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="mainPane" layoutX="10.0" layoutY="10.0" prefHeight="572.0" prefWidth="1200.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="329.0" fitWidth="287.0" layoutX="425.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/einstein.gif" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="main_lbl" alignment="CENTER" layoutX="314.0" layoutY="400.0" prefHeight="39.0" prefWidth="515.0" text="Einstein will browse the web for you. Time to surf!">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
